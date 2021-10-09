@@ -1,6 +1,6 @@
 import nltk
 import string
-from etc import *
+from other import *
 from numpy import array, unique
 
 
