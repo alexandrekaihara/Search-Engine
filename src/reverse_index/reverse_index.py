@@ -82,8 +82,8 @@ def main():
     # Read all json files
     print("** Reading files")
     def add_json_to_dict(p: str, dt: dict) -> None:
-        t = read_txt(p, encoding='utf-8')
-        #t = t.encode("latin_1").decode('utf-8')
+        t = read_txt(p, encoding='latin-1')
+        #t = t.encode("latin_1").decode('latin-1')
         dt[path.basename(p)] = t
     pages = {}
     [add_json_to_dict(path, pages) for path in files]
@@ -117,13 +117,13 @@ def main():
     def list_to_string(data: list) -> str:
         data = [str(e) for e in data]
         return ' '.join(data)
-    [save_to_txt(argv[2] + str(key), list_to_string(pages_indexes[key]), encoding='utf-8') for key in pages.keys()]
+    [save_to_txt(argv[2] + str(key), list_to_string(pages_indexes[key]), encoding='latin-1') for key in pages.keys()]
     
     # Save the dictionary of indices
     print("** Saving list of word and its respective indexes")
-    save_to_json("../../word_indexes/saparadores.json", r.punctuation, encoding='utf-8')
-    save_to_json("../../word_indexes/stopwords.json"  , r.stopwords, encoding='utf-8')
-    save_to_json("../../word_indexes/wordindexes.json", r.words, encoding='utf-8')
+    save_to_json("../../word_indexes/saparadores.json", r.punctuation, encoding='latin-1')
+    save_to_json("../../word_indexes/stopwords.json"  , r.stopwords, encoding='latin-1')
+    save_to_json("../../word_indexes/wordindexes.json", r.words, encoding='latin-1')
 
     print("** Finished execution")
 
