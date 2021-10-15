@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from random import randint
 import os 
 import json
@@ -21,9 +20,9 @@ for n in range (0, len(json_files)):
     with open(sys.argv[1]+json_files[n], 'r', encoding='latin-1') as f:
         example_dict = json.load(f)
         i = str(example_dict['indice'])
-        titulo = (example_dict['titulo'])
-        texto = (example_dict['texto'])
-        texto = titulo + " " + texto.replace(',',' , ',).replace('!', ' ! ').replace(';', ' ; ').replace('.',' . ').replace('?', ' ? ').replace('/',' / ').replace('|', ' | ').replace('#',' # ').replace('$', ' $ ').replace('+', ' + ').replace('\n', ' \n ').replace('\t', ' \t ')
+        texto = (example_dict['titulo']) + ' ' + (example_dict['texto'])
+        texto = texto.encode("latin-1").decode('utf-8')
+        texto = texto.replace(',',' , ',).replace('!', ' ! ').replace(';', ' ; ').replace('.',' . ').replace('?', ' ? ').replace('/',' / ').replace('|', ' | ').replace('#',' # ').replace('$', ' $ ').replace('+', ' + ').replace('\n', ' \n ').replace('\t', ' \t ')
         resultado = texto.strip().lower()
 
         arquivo = open(sys.argv[2] + i + '.txt', 'w', encoding='latin-1')

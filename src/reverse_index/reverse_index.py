@@ -32,23 +32,15 @@ class ReverseIndex():
     def sort_by_freq(self, dt: dict) -> dict:
         return dict(sorted(dt.items(), key=lambda item: item[1], reverse=True))
     
-    def find_stopwords(self) -> None:
-        def add_to_stopwords(key):
+    def split_words(self) -> None:
+        def add_to_dict(key):
             if self.wm.is_stopword(key):
                 self.stopwords[key] = 0
-        [add_to_stopwords(key) for key in self.counting.keys()]
-
-    def find_punctuations(self) -> None:
-        def add_to_punctuation(key):
-            if self.wm.is_punctuation(key):
+            elif self.wm.is_punctuation(key):
                 self.punctuation[key] = 0
-        [add_to_punctuation(key) for key in self.counting.keys()]
-
-    def find_words(self) -> None:
-        def add_to_words(key):
-            if not(self.wm.is_punctuation(key)) and not(self.wm.is_stopword(key)):
+            else:
                 self.words[key] = 0
-        [add_to_words(key) for key in self.counting.keys()]
+        [add_to_dict(key) for key in self.counting.keys()]
 
     def set_indexes(self) -> None:
         def set_index(key: str, index: list, data: dict) -> None:
@@ -85,10 +77,11 @@ def main():
         t = read_txt(p, encoding='latin-1')
         #t = t.encode("latin_1").decode('latin-1')
         dt[path.basename(p)] = t
+
     pages = {}
     [add_json_to_dict(path, pages) for path in files]
     print("**", len(pages.keys()), " files sucessfully read")
-    
+
     # Count the frequency of all pages and sort
     print("** Starting word count")
     [r.count(pages[key]) for key in pages.keys()]
@@ -97,9 +90,7 @@ def main():
 
     # Set all elements to the respective dictionary
     print("** Separating stopwords, punctuation and words")
-    r.find_stopwords()
-    r.find_punctuations()
-    r.find_words()
+    r.split_words()
 
     # Set a unique index for each element
     print("** Setting indexes for words")
@@ -121,7 +112,7 @@ def main():
     
     # Save the dictionary of indices
     print("** Saving list of word and its respective indexes")
-    save_to_json("../../word_indexes/saparadores.json", r.punctuation, encoding='latin-1')
+    save_to_json("../../word_indexes/separadores.json", r.punctuation, encoding='latin-1')
     save_to_json("../../word_indexes/stopwords.json"  , r.stopwords, encoding='latin-1')
     save_to_json("../../word_indexes/wordindexes.json", r.words, encoding='latin-1')
 
