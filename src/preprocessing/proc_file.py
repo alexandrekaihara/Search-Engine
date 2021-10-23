@@ -1,11 +1,12 @@
-from random import randint
 import os 
 import json
+import re
 import sys
 
 
-# '/Users/italo.vaz/OneDrive/UNB/PAA/Pages/' --- PROGRAMA BUSCA ARQUIVOS JSON NA PASTA PAGES
-# '/Users/italo.vaz/OneDrive/UNB/PAA/Processed/' --- CRIA OS ARQUIVOS .TXT E SALVA NA PASTA PROCESSED
+def save_to_txt(path:str, data, encoding) -> None:
+    with open(path, 'w', encoding=encoding) as f:
+        f.write(data)
 
 #ENCONTA TODOS OS ARQUIVOS JSON NA PASTA INDICADA
 path_to_json = sys.argv[1]
@@ -17,17 +18,17 @@ print("\n")
 
 #LER ARQUIVOS, TRATA O TEXTO E GRAVA NO .TXT
 for n in range (0, len(json_files)):
-    with open(sys.argv[1]+json_files[n], 'r', encoding='latin-1') as f:
+    filename = os.path.basename(json_files[n])
+    enc = filename[filename.find("_")+1: filename.find(".")]
+    with open(path_to_json+json_files[n], 'r', encoding=enc) as f:
         example_dict = json.load(f)
-        i = str(example_dict['indice'])
-        texto = (example_dict['titulo']) + ' ' + (example_dict['texto'])
-        texto = texto.encode("latin-1").decode('utf-8')
-        texto = texto.replace(',',' , ',).replace('!', ' ! ').replace(';', ' ; ').replace('.',' . ').replace('?', ' ? ').replace('/',' / ').replace('|', ' | ').replace('#',' # ').replace('$', ' $ ').replace('+', ' + ').replace('\n', ' \n ').replace('\t', ' \t ')
-        resultado = texto.strip().lower()
+    i = str(example_dict['indice'])
+    texto = (example_dict['texto'])
+    texto = texto.replace(',',' , ',).replace('!', ' ! ').replace(';', ' ; ').replace('.',' . ').replace('?', ' ? ').replace('/',' / ').replace('|', ' | ').replace('#',' # ').replace('$', ' $ ').replace('+', ' + ').replace('\n', ' \n ').replace('\t', ' \t ')
+    texto = re.sub(" +", " ", texto)
+    resultado = texto.strip().lower()
 
-        arquivo = open(sys.argv[2] + i + '.txt', 'w', encoding='latin-1')
-        arquivo.write(resultado + ' ' + '\n')
-        arquivo.close()
+    save_to_txt(sys.argv[2]+filename.replace(".json", '.txt'), resultado, enc)
 
 
 #print("{}".format(resultado))

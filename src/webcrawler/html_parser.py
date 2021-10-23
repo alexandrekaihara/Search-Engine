@@ -1,5 +1,6 @@
 import json
 from bs4 import BeautifulSoup
+from bs4.dammit import EncodingDetector
 from glob import glob
 from sys import argv
 import re
@@ -7,31 +8,27 @@ from other import *
 
 
 class HtmlParser():
-    def __init__(self, pagedata: dict) -> None:
+    def __init__(self, pagedata: dict, html: str) -> None:
         self.page = pagedata
-        self.encoding = self.get_encoding
-        self.soup = BeautifulSoup(pagedata['body'], features="html.parser")
+        self.soup = BeautifulSoup(html, features="html.parser")
     def get_text(self) -> str:
         # Remove all script and style elements
         [script.extract() for script in self.soup(["script", "style"])]
-        return self.soup.get_text()
+        return self.soup.get_text(separator=' ')
     def get_title(self) -> str:
         try:
             return self.soup.title.string
         except:
             return ""
-    def get_encoding(self) -> str:
-        re.search("charset=(.*)", self.page['headers']['content-type']).group(1)
-    def get_url(self) -> str:
-        return self.page['request']['uri']['href']
-
+    def get_encoding(self, html) -> str:
+        return EncodingDetector.find_declared_encoding(html, is_html=True) or 'utf-8'
 
 def assemble_json(index, title, url,  text, encoding) -> str:
     jsonfile = {}
     jsonfile['indice'  ] = index
-    jsonfile['title'   ] = title
+    jsonfile['titulo'   ] = title
     jsonfile['url'     ] = url
-    jsonfile['text'    ] = text
+    jsonfile['texto'    ] = text
     jsonfile['encoding'] = encoding
     return jsonfile
 
