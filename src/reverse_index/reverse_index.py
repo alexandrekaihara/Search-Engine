@@ -3,6 +3,7 @@ from wordsmanager import *
 from sys import argv
 from os import path
 from other import *
+from json import loads
 
 
 class ReverseIndex():
@@ -16,9 +17,8 @@ class ReverseIndex():
         self.punctuation = {}
         self.words = {}
 
-    def count(self, text: str) -> None:
-        word_list = self.wm.split(text)
-        dt = self.wm.word_frequency(word_list)
+    def count(self, wordlist: str) -> None:
+        dt = self.wm.word_frequency(wordlist)
         self.add_to_count(dt)
 
     def add_to_count(self, new_count: dict) -> None:
@@ -51,11 +51,15 @@ class ReverseIndex():
         [set_index(key, index, self.punctuation) for key in self.punctuation.keys()]
         [set_index(key, index, self.words      ) for key in self.words.keys()]
 
-    def text_to_indexes(self, text: str) -> list: 
+    def text_to_indexes(self, wordlist: list) -> list: 
         dt = {**self.stopwords, **self.punctuation, **self.words}
-        text = self.wm.split(text, ' ')
         indexes = []
-        [indexes.append(dt[item]) for item in text]
+        def add_to_indexes(l, dt, item):
+            try:
+                indexes.append(dt[item])
+            except:
+                indexes.append(-1)       
+        [add_to_indexes(indexes, dt, item) for item in wordlist]
         return indexes
 
 def main():
@@ -63,7 +67,7 @@ def main():
         argv[1]
         argv[2]
     except:
-        print("Expected the path to the text files (src) and destination directory (dst) as follows:\npython reverse_index.py [src] [dst]")
+        print("Expected the path to the text tokenized files (src) and destination directory (dst) as follows:\npython reverse_index.py [src] [dst]")
         exit(0)
 
     print("** Starting script")
@@ -74,9 +78,9 @@ def main():
     # Read all json files
     print("** Reading files")
     def add_json_to_dict(p: str, dt: dict) -> None:
-        t = read_txt(p, encoding='utf-8')
-        #t = t.encode("latin_1").decode('utf-8')
-        dt[path.basename(p)] = t
+        t = loads(read_txt(p, encoding='utf-8'))
+        index = int(path.basename(p).replace(".txt", ''))
+        dt[index] = t
 
     pages = {}
     [add_json_to_dict(path, pages) for path in files]
@@ -84,7 +88,7 @@ def main():
 
     # Count the frequency of all pages and sort
     print("** Starting word count")
-    [r.count(pages[key]) for key in pages.keys()]
+    [r.count(pages[key]['texto']) for key in pages.keys()]
     r.counting = r.sort_by_freq(r.counting)
     print("** Finished counting words")
 
@@ -100,7 +104,7 @@ def main():
     print("** Starting indexing pages")
     pages_indexes = {}
     [add_to_dict(pages_indexes, key, \
-        r.text_to_indexes(pages[key]))\
+        r.text_to_indexes(pages[key]['texto']))\
         for key in pages.keys()]
 
     # Convert list of indexes to string and save to .txt
@@ -108,7 +112,7 @@ def main():
     def list_to_string(data: list) -> str:
         data = [str(e) for e in data]
         return ' '.join(data)
-    [save_to_txt(argv[2] + str(key), list_to_string(pages_indexes[key]), encoding='utf-8') for key in pages.keys()]
+    [save_to_txt("{}{}.txt".format(argv[2], str(key)), list_to_string(pages_indexes[key]), encoding='utf-8') for key in pages.keys()]
     
     # Save the dictionary of indices
     print("** Saving list of word and its respective indexes")
