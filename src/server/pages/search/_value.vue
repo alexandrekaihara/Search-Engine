@@ -22,11 +22,10 @@
 
 export default {
   async asyncData({params, $axios}){
-    const search = await $axios.$get(`/api/search/`);
-    console.log(search)
+    const search = await $axios.$get(`/api/search/${params.value}`);
     return {
       searchField: params.value,
-      results: []
+      results: search
     };
   }
 }
