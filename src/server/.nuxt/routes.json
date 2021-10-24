@@ -3,18 +3,21 @@
     "name": "error",
     "path": "/error",
     "component": "C:\\\\Users\\\\Kaihara\\\\Desktop\\\\search_engine\\\\src\\\\server\\\\pages\\\\error.vue",
-    "chunkName": "pages/error"
+    "chunkName": "pages/error",
+    "_name": "_ea2f8434"
   },
   {
     "name": "search-value",
     "path": "/search/:value?",
     "component": "C:\\\\Users\\\\Kaihara\\\\Desktop\\\\search_engine\\\\src\\\\server\\\\pages\\\\search\\\\_value.vue",
-    "chunkName": "pages/search/_value"
+    "chunkName": "pages/search/_value",
+    "_name": "_fbb0f6a8"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Kaihara\\\\Desktop\\\\search_engine\\\\src\\\\server\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_47221fb0"
   }
 ]
