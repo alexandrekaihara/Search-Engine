@@ -10,7 +10,7 @@ def save_to_txt(path:str, data, encoding) -> None:
 
 #ENCONTA TODOS OS ARQUIVOS JSON NA PASTA INDICADA
 path_to_json = sys.argv[1]
-json_files = [pos_json for pos_json in os.listdir(path_to_json) if pos_json.endswith('.json')]
+json_files = [pos_json for pos_json in os.listdir(path_to_json) if pos_json.endswith('.txt')]
 
 print("\n")
 print("ARQUIVOS LOCALIZADOS: {}".format(json_files))  # printa os nomes dos arqeuivos jsons
@@ -28,7 +28,7 @@ for n in range (0, len(json_files)):
     texto = re.sub(" +", " ", texto)
     resultado = texto.strip().lower()
 
-    save_to_txt(sys.argv[2]+filename.replace(".json", '.txt'), resultado, enc)
+    save_to_txt(sys.argv[2]+filename, resultado, enc)
 
 
 #print("{}".format(resultado))

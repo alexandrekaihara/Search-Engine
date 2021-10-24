@@ -1,0 +1,45 @@
+estudo aponta que facebook nã£o ã© bom lugar para postar notã­cias locais istoã istoã dinheiro dinheiro rural menu motorshow planeta select gente gooutside hardcore assine anuncie ediã§ã£o da semana nâº 1245 22 . 10 leia mais menu fechar home ãltimas notã­cias estilo economia negã³cios tecnologia finanã§as sustentabilidade giro colunistas geral mundo polã­tica revista siga-nos: geral 6 horas atrã¡s estudo aponta que facebook nã£o ã© bom lugar para postar notã­cias locais rede tem mais de 2 . 85 bilhãµes de usuã¡rios no mundo 
+ da redaã§ã£o da redaã§ã£o 23 / 10 / 21 - 16h42min - atualizado em 23 / 10 / 21 - 16h42min compartilhar um estudo publicado na revista norte-americana digital journalism aponta que notã­cias locais sã£o abafadas em prol de notã­cias nacionais em plataformas como o facebook . 
+ os pesquisadores benjamin toff e nick mathews analisaram um conjunto de quase 2 , 5 milhãµes de postagens no facebook postadas por meios de comunicaã§ã£o local do arizona , minnesota e virgã­nia . a justificativa da escolha foi que nenhum dos estados escolhidos eram nem muito pequenos e nem muito grandes . â  + trabalho hã­brido pode piorar qualidade do sono , diz pesquisador para o estudo eles se concentraram no engajamento total das notã­cias , que consistia em todas as reaã§ãµes possã­veis , incluindo o nãºmero de seguidores das pã¡ginas . tambã©m a dividiram entre hard news , em que enquadraram editoriais como polã­tica , educaã§ã£o e saãºde , e soft news , com postagens sobre esporte , lazer , artes e animais . â  as conclusãµes do estudo foram que as postagens mais voltadas a hard news tiveram melhor performance no facebook . alã©m disso , canais que pertencem ã  redes nacionais postam mais conteãºdo adaptado e pã¡ginas que pertencem ã  redes de capital aberto estavam entre as mais ativas da plataforma e propensas a receber taxas mais altas de interaã§ã£o . âacreditamos que as descobertas lanã§am luz sobre como o facebook âcombinado com estruturas de propriedade de mã­diaâ pode dificultar a tarefa de servir ã s comunidades locais com notã­cias originais que satisfaã§am necessidades cã­vicas importantesâ , apontou mattews em sua conta no twitter veja tambã©m 
+ + como podcasts podem ajudar na educaã§ã£o financeira do brasileiro 
+ + mistã©rio: mulher descobre que nã£o ã© a mã£e biolã³gica de seus prã³prios filhos 
+ + truque para espremer limãµes vira mania nas redes sociais 
+ 
+ + chef playmate cria receita afrodisã­aca para o dia do orgasmo 
+ 
+ + mercedes-benz sprinter ganha versã£o motorhome 
+ + anorexia , um transtorno alimentar que pode levar ã  morte 
+ 
+ + agãªncia dos eua alerta: nunca lave carne de frango crua 
+ + yasmin brunet quebra o silãªncio 
+ + tubarã£o ã© capturado no ma com restos de jovens desaparecidos no estã´mago 
+ + veja quanto custa comer nos restaurantes dos jurados do masterchef 
+ + leilã£o de carros e motos tem desde kombi a nissan frontier 0km 
+ 
+ 
+ 
+ "}} , {"__typename":"injected_content" , "position":"bottom" , "content":{"type":"injected:rawhtml" , "attrs":{} , "value":" "}} , {"__typename":"injected_content" , "position":"36" , "content":{"type":"injected:rawhtml" , "attrs":{} , "value":" 
+ 
+ 
+ 
+ 
+ "}} , {"__typename":"injected_content" , "position":"14" , "content":{"type":"injected:googleadsense" , "attrs":{"slot":"2453711447" , "class":"adsbygoogle" , "style":"display:block ; text-align:center ; " , "client":"ca-pub-4663753467999594" , "format":"fluid" , "layout":"in-article"} , "value":""}} , {"__typename":"injected_content" , "position":"1" , "content":{"type":"injected:rawhtml" , "attrs":{} , "value":"  
+ "}} , {"__typename":"injected_content" , "position":"21" , "content":{"type":"injected:googleadsense" , "attrs":{"slot":"2453711447" , "class":"adsbygoogle" , "style":"display:block ; text-align:center ; " , "client":"ca-pub-4663753467999594" , "format":"fluid" , "layout":"in-article"} , "value":""}} , {"__typename":"injected_content" , "position":"bottom" , "content":{"type":"injected:rawhtml" , "attrs":{} , "value":" veja tambã©m 
+ + como podcasts podem ajudar na educaã§ã£o financeira do brasileiro 
+ + mistã©rio: mulher descobre que nã£o ã© a mã£e biolã³gica de seus prã³prios filhos 
+ + truque para espremer limãµes vira mania nas redes sociais 
+ 
+ + chef playmate cria receita afrodisã­aca para o dia do orgasmo 
+ 
+ + mercedes-benz sprinter ganha versã£o motorhome 
+ + anorexia , um transtorno alimentar que pode levar ã  morte 
+ 
+ + agãªncia dos eua alerta: nunca lave carne de frango crua 
+ + yasmin brunet quebra o silãªncio 
+ + tubarã£o ã© capturado no ma com restos de jovens desaparecidos no estã´mago 
+ + veja quanto custa comer nos restaurantes dos jurados do masterchef 
+ + leilã£o de carros e motos tem desde kombi a nissan frontier 0km 
+  
+  
+ "}} , {"__typename":"injected_content" , "position":"4" , "content":{"type":"injected:googleadsense" , "attrs":{"slot":"6896316656" , "class":"adsbygoogle" , "style":"display:block" , "client":"ca-pub-1592119126114388" , "format":"auto" , "layout":null} , "value":""}}] , "date":"2021-10-23t16:42:02" , "modified":"2021-10-23t16:42:02" , "post_editorials":[{"__typename":"post_editorials" , "editorial":{"__typename":"editorial" , "name":"geral" , "route":{"__typename":"route" , "path":" / categoria / economia / geral-economia"}}}] , "post_authors":[{"__typename":"post_authors" , "author":{"__typename":"author" , "name":"da redaã§ã£o" , "route":{"__typename":"route" , "path":" / autor / da-redacao"}}}] , "featured_image":{"__typename":"featured_image" , "caption":" rede tem mais de 2 . 85 bilhãµes de usuã¡rios no mundo 
+ " , "media":{"__typename":"media" , "alt":"rede tem mais de 2 . 85 bilhãµes de usuã¡rios no mundo" , "src":"https: / / www . istoedinheiro . com . br / wp-content / uploads / sites / 17 / 2021 / 10 / facebook-pexels-lucasamarco-e1635018101699 . jpeg" , "title":"rede tem mais de 2 . 85 bilhãµes de usuã¡rios no mundo" , "width":999 , "height":561}}} , "root_query":{"__typename":"query" , "post_by_pk({"id":"a58c6219-f560-4fc4-bd05-ea9bcda85eda"})":{"__ref":"post:a58c6219-f560-4fc4-bd05-ea9bcda85eda"}}}} , "apollo":null}} , "page":" / article" , "query":{"content_id":"a58c6219-f560-4fc4-bd05-ea9bcda85eda"} , "buildid":"xogvtslsjcwj4umhlrba6" , "isfallback":false , "dynamicids":[7994] , "customserver":true , "gip":true , "appgip":true , "scriptloader":[]}

@@ -39,7 +39,7 @@ class WebCrawler():
         text  = parser.get_text()
         enc   = parser.get_encoding(html)
         jsonfile = assemble_json(counter, title, url, text, enc)
-        save_to_json("{}/{}_{}.json".format(dest_dir, counter, enc), jsonfile, encoding=enc)
+        save_to_json("{}/{}_{}.txt".format(dest_dir, counter, enc), jsonfile, encoding=enc)
         counter += 1
 
 

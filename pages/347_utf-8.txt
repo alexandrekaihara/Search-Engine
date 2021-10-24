@@ -1,0 +1,1 @@
+{"indice": 347, "titulo": "", "url": "https://google.com/url?q=https://df.olx.com.br/distrito-federal-e-regiao/outras-cidades/formosa/imoveis/terrenos/fazendas&sa=U&ved=2ahUKEwjD6fbD0eHzAhVtK7kGHfx3CiQQFnoECAsQAg&usg=AOvVaw0LHHx0XkCnjMSIctBYfsp-", "texto": "", "encoding": "utf-8"}
