@@ -1,0 +1,6 @@
+// Função de busca passada para o Pedro. Não incluir na versão final.
+{
+    "name": "UnB",
+    "url": "https://www.unb.br/",
+    "description": "MARCO LAMENTÁVEL. A UnB solidariza-se com os familiares das vítimas de covid-19 ... UnB tem mais de 150 cientistas em destaque na América Latina ..."
+}
