@@ -1,0 +1,1 @@
+{"indice": 62, "titulo": "", "url": "https://google.com/url?q=https://amigoedu.com.br/&sa=U&ved=2ahUKEwjVqLiW7OPzAhWCC9QKHRebCrsQFnoECAEQAg&usg=AOvVaw1vSu4UJoQO_UD3K_pJQkgX", "texto": "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n", "encoding": "utf-8"}

@@ -6,7 +6,7 @@ from html_parser import *
 
 class WebCrawler():
     def search_on_google(self, search_req: str) -> requests.models.Response:        
-        return requests.get("https://www.google.com/search?q={}".format(search_req))
+        return requests.get("https://www.google.com/search?q={}".format(search_req), timeout=5)
     def retrieve_all_links(self, html):
         remove = ["maps", "policies.google", 'search?q=']
         parser = 'html.parser'  # or 'lxml' (preferred) or 'html5lib', if installed
@@ -24,7 +24,7 @@ class WebCrawler():
         print("*** Generating json for {}".format(url))
         global counter
         try: 
-            request = requests.get(url)
+            request = requests.get(url, timeout=5)
         except:
             print("Got some error on connecting to url")
             return
