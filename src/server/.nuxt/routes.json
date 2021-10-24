@@ -1,0 +1,20 @@
+[
+  {
+    "name": "error",
+    "path": "/error",
+    "component": "C:\\\\Users\\\\Kaihara\\\\Desktop\\\\search_engine\\\\src\\\\server\\\\pages\\\\error.vue",
+    "chunkName": "pages/error"
+  },
+  {
+    "name": "search-value",
+    "path": "/search/:value?",
+    "component": "C:\\\\Users\\\\Kaihara\\\\Desktop\\\\search_engine\\\\src\\\\server\\\\pages\\\\search\\\\_value.vue",
+    "chunkName": "pages/search/_value"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Kaihara\\\\Desktop\\\\search_engine\\\\src\\\\server\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]

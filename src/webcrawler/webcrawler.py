@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 import requests
 from sys import argv
 from bs4 import BeautifulSoup
-import json
 from html_parser import *
 
 class WebCrawler():
@@ -30,7 +29,7 @@ class WebCrawler():
             print("Got some error on connecting to url")
             return
         try:
-            html = request.content.decode('unicode_escape')
+            html = request.text
         except UnicodeDecodeError:
             print("Couldn't decode")
             return
@@ -39,7 +38,7 @@ class WebCrawler():
         text  = parser.get_text()
         enc   = parser.get_encoding(html)
         jsonfile = assemble_json(counter, title, url, text, enc)
-        save_to_json("{}/{}_{}.txt".format(dest_dir, counter, enc), jsonfile, encoding=enc)
+        save_to_json("{}/{}.txt".format(dest_dir, counter), jsonfile, encoding=enc)
         counter += 1
 
 
