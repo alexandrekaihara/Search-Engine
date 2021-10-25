@@ -2,22 +2,22 @@
   {
     "name": "error",
     "path": "/error",
-    "component": "C:\\\\Users\\\\Kaihara\\\\Desktop\\\\search_engine\\\\src\\\\server\\\\pages\\\\error.vue",
+    "component": "/media/pedrol3001/Disco Local/Pedro/Facul/search_engine/src/server/pages/error.vue",
     "chunkName": "pages/error",
-    "_name": "_ea2f8434"
+    "_name": "_9c36ab98"
   },
   {
     "name": "search-value",
     "path": "/search/:value?",
-    "component": "C:\\\\Users\\\\Kaihara\\\\Desktop\\\\search_engine\\\\src\\\\server\\\\pages\\\\search\\\\_value.vue",
+    "component": "/media/pedrol3001/Disco Local/Pedro/Facul/search_engine/src/server/pages/search/_value.vue",
     "chunkName": "pages/search/_value",
-    "_name": "_fbb0f6a8"
+    "_name": "_e2eaf336"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\Kaihara\\\\Desktop\\\\search_engine\\\\src\\\\server\\\\pages\\\\index.vue",
+    "component": "/media/pedrol3001/Disco Local/Pedro/Facul/search_engine/src/server/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_47221fb0"
+    "_name": "_6e1e8bfe"
   }
 ]

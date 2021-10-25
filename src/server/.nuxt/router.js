@@ -4,9 +4,9 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _ea2f8434 = () => interopDefault(import('..\\pages\\error.vue' /* webpackChunkName: "pages/error" */))
-const _fbb0f6a8 = () => interopDefault(import('..\\pages\\search\\_value.vue' /* webpackChunkName: "pages/search/_value" */))
-const _47221fb0 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _9c36ab98 = () => interopDefault(import('../pages/error.vue' /* webpackChunkName: "pages/error" */))
+const _e2eaf336 = () => interopDefault(import('../pages/search/_value.vue' /* webpackChunkName: "pages/search/_value" */))
+const _6e1e8bfe = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -21,15 +21,15 @@ export const routerOptions = {
 
   routes: [{
     path: "/error",
-    component: _ea2f8434,
+    component: _9c36ab98,
     name: "error"
   }, {
     path: "/search/:value?",
-    component: _fbb0f6a8,
+    component: _e2eaf336,
     name: "search-value"
   }, {
     path: "/",
-    component: _47221fb0,
+    component: _6e1e8bfe,
     name: "index"
   }],
 
