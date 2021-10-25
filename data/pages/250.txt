@@ -1,1 +1,0 @@
-{"indice": 250, "titulo": "Saúde Digital - SESA", "url": "https://google.com/url?q=https://vacinacaocovid.saude.ce.gov.br/&sa=U&ved=2ahUKEwjbie7wsePzAhXippUCHZZeDocQFnoECAAQAg&usg=AOvVaw2Awt2YFuZzQvzq9M10Iqom", "texto": "\n \n \n \n Saúde Digital - SESA \n   \n \n \n \n \n \n \n", "encoding": "utf-8"}

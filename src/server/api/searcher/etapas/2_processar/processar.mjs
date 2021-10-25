@@ -1,7 +1,6 @@
 // Converte uma string de busca para uma notação polonesa válida
 export function processar(){
     return (string) => {
-        string = string.replace('""', '') // Remove aspas sem nada dentro
         
         let string_list = string.split('')
 
