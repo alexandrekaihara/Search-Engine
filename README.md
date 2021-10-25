@@ -1,4 +1,5 @@
 # Search Engine - Projeto e Análise de Algoritmos
+Este trabalho visa construir um algoritmo busca de páginas eficiente através da indexação de páginas. A solução proposta é realizar a indexação inversa de páginas implementado essencialmente em JavaScript. Devido ao tamanho excessivo dos dados e do código gerado pelo Yarn, todos os arquivos estarão disponíveis em 
 ## 1. Alunos
 1. Alexandre Mitsuru Kaihara - 18/0029690
 2.  Pedro Luis Chaves Rocha - 180054635
@@ -57,8 +58,7 @@ Assim que realizar todas as configurações abra o browser e digite:
 
 Será possível visualizar um campo para digitar a busca e outro para realizar a consulta. Nesse campo realize uma consulta qualquer e automaticamente será encaminhado para uma nova página contendo o resultado da consulta feita.
 
-## WebCrawler
-### Requisitos 
+# WebCrawler
 Foi feito um script em python para poder baixar o html das páginas na web. O único requisito para a sua utilização é o download da biblioteca “beautifulsoup” através do comando no terminal:
 > pip install beautifulsoup4p
 
@@ -71,3 +71,7 @@ Para utilizar, dentro do diretório tem um arquivo chamado words.txt que é util
 Para executar, basta passar como parâmetro dois caminhos para a localização do arquivo words.txt e o diretório de destino.
 
 > python webcrawler.py words.txt ../server/api/data/pages/
+
+
+# Tokenizer
+Esse é um script
