@@ -3,6 +3,8 @@
 ## Requirements
 
 ```bash
+# Linux
+
 # install nodejs
 $ sudo apt-get update
 $ sudo apt-get intall nodejs
@@ -10,6 +12,11 @@ $ sudo apt-get intall nodejs
 # install npm
 $ sudo apt-get update
 $ sudo apt-get intall npm
+
+# Windows 
+
+# install nodejs and npm
+$ https://nodejs.org/en/
 
 # install yarn
 $ npm install --global yarn
