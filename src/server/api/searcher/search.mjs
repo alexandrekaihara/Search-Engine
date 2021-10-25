@@ -13,9 +13,8 @@ export function make_Searcher(text_index_path, index_path, words_path, JSON_text
 	}
 
 	let text_index_acess = makeFileAcess(text_index_path); 
-	let index_acess = makeFileAcess(index_path);
 	let ids = readWords(words_path);
-	let index = makeIndex(ids, text_index_acess, index_acess);
+	let index = makeIndex(ids,index_path);
 	let Universal_set = getAllIndexes(text_index_path);
 
 	let p = processar();
@@ -28,6 +27,8 @@ export function make_Searcher(text_index_path, index_path, words_path, JSON_text
 		matches.clear();
 
 		let notacao_polonesa = p(str);
+
+
 		let page_sets;
 		[matches,page_sets] = b(words_in(notacao_polonesa));
 
@@ -43,15 +44,15 @@ export function make_Searcher(text_index_path, index_path, words_path, JSON_text
 
 	let getJSONFile = makePageReader(JSON_text_path);
 	let retrieve_preview = (page_id,n) => {
+		let page = getJSONFile(page_id);
 		if(!matches.has(page_id))
-			return null;
+			return {name:page.titulo, url:page.url, description:null};
 
 		// Fazer intervalos para a busca de preview
 		let posicoes = matches.get(page_id);
 		let intervals = posicoes.map(e=>({l: e.posicao-n, upper: e.posicao+n+e.string.length}));
 		
-		let page = getJSONFile(page_id);
-		let word_list = page.texto.match(/[^\s]+/g);
+		let word_list = page.texto;
 
 		// Processar intervalos para evitar buscas fora de intervalos ou com intersecções entre si
 		adjust_intervals(intervals,word_list.length);
@@ -98,20 +99,26 @@ function words_in(notacao_polonesa) {
 
 
 /*
-let root_to_project = '/mnt/c/users/guilherme/desktop/searchengine/';
+let root_to_project = '/mnt/c/users/guilherme/desktop/search_engine/src/server/api/';
 let text_index_path = root_to_project + 'data/text_indexes/';
 let index_path = root_to_project + 'data/invertedIndexes/';
 let words_path = root_to_project + 'data/word_indexes/';
-let JSON_text_path = root_to_project + 'data/mockups/';	
+let JSON_text_path = root_to_project + 'data/tokenized_pages/';	
 let searcher = make_Searcher(text_index_path, index_path, words_path, JSON_text_path);
 searcher.search("unb AND-(-\"distrito federal\" OR vestibular)");
 console.log(searcher.retrieve_preview(searcher.result()[0],1));
 console.log(searcher.retrieve_preview(searcher.result()[0],5));
 console.log(searcher.result());
-searcher.search("-LOL");
+searcher.search("-Porta");
 console.log(searcher.result());
-searcher.search("\"LOL LOL\"");
+searcher.search("\"Casa\"");
 console.log(searcher.result());
 console.log(searcher.retrieve_preview(searcher.result()[0],3));
-*/
 
+
+searcher.search("unb AND-(-\"distrito federal\" OR vestibular)");
+let results=[];
+for(let id of searcher.result()) 
+	results.push(searcher.retrieve_preview(id,5));
+console.log(results);
+*/

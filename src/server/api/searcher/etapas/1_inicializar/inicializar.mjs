@@ -13,6 +13,7 @@ export function init_Index_files(text_index_acess, index_path) {
         return list;
     })();
 
+
     let indexFile = {};
 
     var readList = text_index_acess.readList;
@@ -32,8 +33,11 @@ export function init_Index_files(text_index_acess, index_path) {
         mkdirSync(index_path);
 
     let writeListToFile = (word_id) => {writeFileSync(index_path + word_id +'.txt', indexFile[word_id], "utf8");};
-    for(let word_id in indexFile)
+    for(let word_id in indexFile) {
+//'74153':
+        console.log(word_id);
         writeListToFile(word_id);
+    }
 }
 
 /*

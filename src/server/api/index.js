@@ -5,11 +5,26 @@ const app = express()
 
 
 app.get('/search/:id', (req, res) => {
-  const { id } = req.params;
-  console.log(id)
-  
-  res.status(200).send(search(id));
-  //.map((value)=>{return{name: value.name, url: value.url, description: value.desc}})
+  const { string } = req.params;
+  let text_index_path = dirname + '/data/text_indexes/';
+  let index_path = dirname + '/data/invertedIndexes/';
+  let words_path = dirname + '/data/word_indexes/';
+  let JSON_text_path = dirname + '/data/tokenized_pages/';
+  let searcher;
+  import('/searcher/search.mjs').then((module) => {
+    searcher = module.make_Searcher(text_index_path, index_path, words_path, JSON_text_path);
+  });
+
+  searcher.search(string);
+  let results=[];
+  for(let id of searcher.result())  {
+    let preview = searcher.retrieve_preview(id,10);
+    if(preview.description === null)
+      preview.description = "Sem descrição: Página pertecente a complemento do conjunto universo!"
+    results.push(preview);
+  }
+
+  res.status(200).send(results);
 });
 
 function search(busca){

@@ -50,7 +50,7 @@ console.log("unb =>", words["unb"]);
 
 export function makePageReader(folder_path) {
 	return (page_id) => {
-		let filename = idFileFormat(page_id,'JSON');
+		let filename = idFileFormat(page_id,'txt');
 		return readJSON(folder_path,filename);
 	}
 }

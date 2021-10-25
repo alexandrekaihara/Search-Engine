@@ -1,4 +1,4 @@
-function adjust_intervals(intervals, upper_limit){
+export function adjust_intervals(intervals, upper_limit){
     let intervalos = intervals.sort(function(a, b) {
         return a - b;
     });
