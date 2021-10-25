@@ -71,6 +71,9 @@ Para executar é necessário utilizar o nodejs que instalado na seção do servi
 Foi utilizado o framework chamado Nuxtjs em que utiliza um servidor Node juntamente com uma interface gráfica em Vue para prover uma o buscador em uma aplicação web. O algoritmo de busca foi feito em javascript, assim, tudo será rodado no servidor Node que o Nuxt fornece. Assim, a interface gráfica tem acesso aos resultado por meio de um request do tipo GET ao servidor.
 
 ## Requirements
+A partir do diretório raiz, acesse:
+
+> cd src/server/
 
 ```bash
 # Linux
