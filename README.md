@@ -45,6 +45,10 @@ Para isso é necessário instalar a biblioteca do nltk através do comando:
 
 > pip install nltk
 
+Acesse o diretório api do servidor a partir do diretório raiz do projeto:
+
+> cd src/reverse_index
+
 Em seguida para executar precisamos usar o seguinte comando:
 
 > python reverse_index.py ../server/api/data/tokenized_pages/ ../server/api/data/text_indexes/
@@ -54,7 +58,7 @@ E assim, todas as novas páginas web baixadas poderão ser indexadas pelo algori
 #  Reverse index Generator
 Apór termos todas as páginas indexadas, esse script é responsável para gerar todos os reverse index para a busca.
 
-Acesse o diret´orio api do servidor a partir do diretório raiz do projeto:
+Acesse o diretório api do servidor a partir do diretório raiz do projeto:
 
 > cd src/server/api
 
