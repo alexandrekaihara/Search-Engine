@@ -14,7 +14,7 @@ Este trabalho visa construir um algoritmo busca de páginas eficiente através d
 Foi feito um script em python para poder baixar o html das páginas na web. O único requisito para a sua utilização é o download da biblioteca “beautifulsoup” através do comando no terminal:
 > pip install beautifulsoup4
 
-Agore acesse o diretório do webcrawler:
+Agore acesse o diretório do webcrawler, a partir do diretório raiz do projeto:
 
 > cd src/webcrawler
 
@@ -71,9 +71,11 @@ Para executar é necessário utilizar o nodejs que instalado na seção do servi
 Foi utilizado o framework chamado Nuxtjs em que utiliza um servidor Node juntamente com uma interface gráfica em Vue para prover uma o buscador em uma aplicação web. O algoritmo de busca foi feito em javascript, assim, tudo será rodado no servidor Node que o Nuxt fornece. Assim, a interface gráfica tem acesso aos resultado por meio de um request do tipo GET ao servidor.
 
 ## Requirements
-A partir do diretório raiz, acesse:
+A partir do diretório raiz do projeto, acesse:
 
 > cd src/server/
+
+Executer todos esses comandos para a configuração:
 
 ```bash
 # Linux
@@ -110,12 +112,8 @@ $ yarn start
 
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
 Assim que realizar todas as configurações abra o browser e digite:
 
 > localhost:3000
 
 Será possível visualizar um campo para digitar a busca e outro para realizar a consulta. Nesse campo realize uma consulta qualquer e automaticamente será encaminhado para uma nova página contendo o resultado da consulta feita.
-
-As demais seções não são necessárias para a execução do programa, uma vez que os dados necessários para a execução já estão prontos. Caso queira executar a nossa seach engine com um novo conjunto de dados, é necessário baixar através do nosso webcrawler e seguir com os demais processamentos - NECESSARIAMENTE nessa ordem - em cima dos dados baixados.
