@@ -59,7 +59,7 @@ Assim que realizar todas as configurações abra o browser e digite:
 
 Será possível visualizar um campo para digitar a busca e outro para realizar a consulta. Nesse campo realize uma consulta qualquer e automaticamente será encaminhado para uma nova página contendo o resultado da consulta feita.
 
-As demais seções não são necessárias para a execução do programa, uma vez que os dados necessários para a execução já estão prontos. Caso queira executar a nossa seach engine com um novo conjunto de dados, é necessário baixar através do nosso webcrawler e seguir com os demais processamentos em cima dos dados baixados.
+As demais seções não são necessárias para a execução do programa, uma vez que os dados necessários para a execução já estão prontos. Caso queira executar a nossa seach engine com um novo conjunto de dados, é necessário baixar através do nosso webcrawler e seguir com os demais processamentos - NECESSARIAMENTE nessa ordem - em cima dos dados baixados.
 
 # WebCrawler
 Foi feito um script em python para poder baixar o html das páginas na web. O único requisito para a sua utilização é o download da biblioteca “beautifulsoup” através do comando no terminal:
