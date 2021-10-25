@@ -63,7 +63,7 @@ As demais seções não são necessárias para a execução do programa, uma vez
 
 # WebCrawler
 Foi feito um script em python para poder baixar o html das páginas na web. O único requisito para a sua utilização é o download da biblioteca “beautifulsoup” através do comando no terminal:
-> pip install beautifulsoup4p
+> pip install beautifulsoup4
 
 Agore acesse o diretório do webcrawler:
 
