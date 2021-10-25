@@ -1,5 +1,6 @@
 # Search Engine - Projeto e Análise de Algoritmos
-Este trabalho visa construir um algoritmo busca de páginas eficiente através da indexação de páginas. A solução proposta é realizar a indexação inversa de páginas implementado essencialmente em JavaScript. Devido ao tamanho excessivo dos dados e do código gerado pelo Yarn, todos os arquivos estarão disponíveis em 
+Este trabalho visa construir um algoritmo busca de páginas eficiente através da indexação de páginas. A solução proposta é realizar a indexação inversa de páginas implementado essencialmente em JavaScript. Devido ao tamanho excessivo dos dados e do código gerado pelo Yarn, todos os arquivos estarão disponíveis em https://github.com/mdewinged/search_engine.git
+
 ## 1. Alunos
 1. Alexandre Mitsuru Kaihara - 18/0029690
 2.  Pedro Luis Chaves Rocha - 180054635
@@ -58,6 +59,8 @@ Assim que realizar todas as configurações abra o browser e digite:
 
 Será possível visualizar um campo para digitar a busca e outro para realizar a consulta. Nesse campo realize uma consulta qualquer e automaticamente será encaminhado para uma nova página contendo o resultado da consulta feita.
 
+As demais seções não são necessárias para a execução do programa, uma vez que os dados necessários para a execução já estão prontos. Caso queira executar a nossa seach engine com um novo conjunto de dados, é necessário baixar através do nosso webcrawler e seguir com os demais processamentos em cima dos dados baixados.
+
 # WebCrawler
 Foi feito um script em python para poder baixar o html das páginas na web. O único requisito para a sua utilização é o download da biblioteca “beautifulsoup” através do comando no terminal:
 > pip install beautifulsoup4p
@@ -74,4 +77,27 @@ Para executar, basta passar como parâmetro dois caminhos para a localização d
 
 
 # Tokenizer
-Esse é um script
+Depois de baixadas as páginas web e salvar no diretório "../server/api/data/pages/", executamos o tokenizer. Esse é um script que faz um preprocessamento em todos os textos de todas as páginas web baixadas e separa todas as palavras em um array.
+
+Não há nenhuma dependência para esse script, uma vez que todas as bibliotecas usadas são as padrões do próprio python.
+
+Acesse o diretório do tokenizer a partir do diretório raiz do projeto:
+
+> cd src/tokenizing/
+
+Para executar o script use o comando:
+
+> python tokenize.py ../server/api/data/pages/ ../server/api/data/tokenized_pages/
+
+#  Word Indexes
+Depois de tokenizado o texto das páginas, convertemos as palavras em indices, de tal forma que posteriormente as execuções não serão mais feitas por comparação de strings, mas serão gerados arquivos que representam subconjuntos de páginas que contém uma determinada palavra.
+
+Para isso é necessário instalar a biblioteca do nltk através do comando:
+
+> pip install nltk
+
+Em seguida para executar precisamos usar o seguinte comando:
+
+> python reverse_index.py ../server/api/data/tokenized_pages/ ../server/api/data/text_indexes/
+
+E assim, todas as novas páginas web baixadas poderão ser indexadas pelo algoritmo desenvolvido por nós.
