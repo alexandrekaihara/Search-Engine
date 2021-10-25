@@ -18,7 +18,7 @@ app.get('/search/:id', (req, res) => {
   
   let results=[];
   for(let id of searcher.result())  {
-    let preview = searcher.retrieve_preview(id,10);
+    let preview = searcher.retrieve_preview(id,50);
     if(preview.description === null)
       preview.description = "Sem descrição: Página pertecente a complemento do conjunto universo!"
     results.push(preview);

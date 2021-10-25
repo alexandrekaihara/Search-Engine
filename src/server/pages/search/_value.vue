@@ -12,6 +12,7 @@
         <a :href="res.url">
           <h2>{{res.name}}</h2>
           <span>{{res.description}}</span>
+          <hr class="dashed">
         </a>
       </li>
     </ul>
@@ -33,6 +34,11 @@ export default {
 
 
 <style scoped>
+
+
+  hr.dashed {
+    border-top: 3px dashed #bbb;
+  }
   .result {
     margin: 0 10rem;
   }
@@ -63,6 +69,7 @@ export default {
     list-style: none;
   }
   a{
+    color: #303030;
     text-decoration: none;
   }
   .header{
