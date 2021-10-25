@@ -116,9 +116,9 @@ def main():
     
     # Save the dictionary of indices
     print("** Saving list of word and its respective indexes")
-    save_to_json("../../data/word_indexes/separadores.json", r.punctuation, encoding='utf-8')
-    save_to_json("../../data/word_indexes/stopwords.json"  , r.stopwords, encoding='utf-8')
-    save_to_json("../../data/word_indexes/wordindexes.json", r.words, encoding='utf-8')
+    save_to_json("../server/api/data/word_indexes/separadores.json", r.punctuation, encoding='utf-8')
+    save_to_json("../server/api/data/word_indexes/stopwords.json"  , r.stopwords, encoding='utf-8')
+    save_to_json("../server/api/data/word_indexes/wordindexes.json", r.words, encoding='utf-8')
 
     print("** Finished execution")
 
