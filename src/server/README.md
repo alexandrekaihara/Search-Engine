@@ -7,11 +7,11 @@
 
 # install nodejs
 $ sudo apt-get update
-$ sudo apt-get intall nodejs
+$ sudo apt-get install nodejs
 
 # install npm
 $ sudo apt-get update
-$ sudo apt-get intall npm
+$ sudo apt-get install npm
 
 # Windows 
 
