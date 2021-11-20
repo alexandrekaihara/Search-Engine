@@ -1,14 +1,5 @@
 # Search Engine - Projeto e Análise de Algoritmos
-Este trabalho visa construir um algoritmo busca de páginas eficiente através da indexação de páginas. A solução proposta é realizar a indexação inversa de páginas implementado essencialmente em JavaScript. 
-
-## 1. Alunos
-1. Alexandre Mitsuru Kaihara - 18/0029690
-2.  Pedro Luis Chaves Rocha - 180054635
-3. Gabriel Rodrigues Diogenes Macedo - 150126808
-4. Guilherme Chagas Suzuki - 180032518
-5. ITALO FRANKLIN CARDOSO VAZ - 130115428
-6.  JAQUELINE GUTIERRI COELHO - 150131283
-7.  Felipe Xavier Barbosa da Silva - 180016326
+Este trabalho visa construir um algoritmo busca de páginas eficiente através da indexação de páginas e disponibilizar através de um serviço Web. A solução proposta é realizar a indexação inversa de páginas implementado essencialmente em JavaScript. O processo de indexação inversa foi decomposta em etapas para o desenvolvimento independente de cada dupla do grupo. Vale ressaltar que já existe um conjunto exemplo de páginas baixadas e processadas com os índices reversos no repositório, se o usuário quiser, pode pular para a etapa de configuração do servidor para executar o Search Engine.
 
 # WebCrawler
 Foi feito um script em python para poder baixar o html das páginas na web. O único requisito para a sua utilização é o download da biblioteca “beautifulsoup” através do comando no terminal:
@@ -18,12 +9,11 @@ Agore acesse o diretório do webcrawler, a partir do diretório raiz do projeto:
 
 > cd src/webcrawler
 
-Para utilizar, dentro do diretório tem um arquivo chamado words.txt que é utilizado para fazer buscas no google para baixar as páginas html.
+Para utilizar, dentro do diretório tem um arquivo chamado words.txt que é utilizado determinar quais buscas serão feitas no google para baixar as páginas html.
 
 Para executar, basta passar como parâmetro dois caminhos para a localização do arquivo words.txt e o diretório de destino.
 
 > python webcrawler.py words.txt ../server/api/data/pages/
-
 
 # Tokenizer
 Depois de baixadas as páginas web e salvar no diretório "../server/api/data/pages/", executamos o tokenizer. Esse é um script que faz um preprocessamento em todos os textos de todas as páginas web baixadas e separa todas as palavras em um array.
@@ -117,3 +107,36 @@ Assim que realizar todas as configurações abra o browser e digite:
 > localhost:3000
 
 Será possível visualizar um campo para digitar a busca e outro para realizar a consulta. Nesse campo realize uma consulta qualquer e automaticamente será encaminhado para uma nova página contendo o resultado da consulta feita.
+
+# Intruções de Uso
+Na página inicial será exibido um campo em que será possível inserir a busca. Assim como no Google, é possível adicionar algumas operações dentro da busca para torná-la mais precisa. Tais operações são o AND, OR, busca literal e negação. Nas buscas é possível fazer qualquer composição dessas operações e inclusive adicionar ordem de precedência utilizando-se parênteses.
+
+## Operação AND
+A operação AND significa a interseção entre o resultado de duas buscas. Por exemplo:
+> unb AND notícias
+Retornará todos os resultados que conter a palavra unb e notícias.
+
+## Operação OR
+A operação OR significa a interseção entre o resultado de duas buscas. Por exemplo:
+> unb OR notícias
+Retornará todos os resultados que conter a palavra unb e/ou notícias.
+
+## Operação Busca Literal
+A busca literal significa será feita a busca por páginas que contenham exatamente um trecho que tenha o mesmo texto contido na busca. Por exemplo:
+> "unb notícias"
+Retornará todas as buscas que tiver literalmente "unb notícias".
+
+## Operação Negação
+A negação é a eliminação das páginas de um conjunto que contenham uma determinada busca ou palavra. Por exemplo:
+> unb -notícias
+Retornará todas as páginas que tiverem a palavra unb mas não notícias no mesmo documento.
+
+# Autores
+1. Alexandre Mitsuru Kaihara
+2. Pedro Luis Chaves Rocha 
+3. Gabriel Rodrigues Diogenes Macedo 
+4. Guilherme Chagas Suzuki
+5. Italo FRanklin Cardoso Vaz
+6. Jaqueline Gutierri Coelho 
+7. Felipe Xavier Barbosa da Silva
+
