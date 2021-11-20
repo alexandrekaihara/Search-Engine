@@ -1,5 +1,7 @@
 # Search Engine - Projeto e Análise de Algoritmos
-Este trabalho visa construir um algoritmo busca de páginas eficiente através da indexação de páginas e disponibilizar através de um serviço Web. A solução proposta é realizar a indexação inversa de páginas implementado essencialmente em JavaScript. O processo de indexação inversa foi decomposta em etapas para o desenvolvimento independente de cada dupla do grupo. Vale ressaltar que já existe um conjunto exemplo de páginas baixadas e processadas com os índices reversos no repositório, se o usuário quiser, pode pular para a etapa de configuração do servidor para executar o Search Engine.
+Este trabalho visa construir um algoritmo busca de páginas eficiente através da indexação de páginas e disponibilizar através de um serviço Web. A solução proposta é realizar a indexação inversa de páginas implementado essencialmente em JavaScript. 
+
+O processo de indexação inversa foi decomposta em etapas para o desenvolvimento independente de cada dupla do grupo. Vale ressaltar que já existe um conjunto exemplo de páginas baixadas e processadas com os índices reversos no repositório, se o usuário quiser, pode pular para a etapa de configuração do servidor para executar o Search Engine.
 
 # WebCrawler
 Foi feito um script em python para poder baixar o html das páginas na web. O único requisito para a sua utilização é o download da biblioteca “beautifulsoup” através do comando no terminal:
