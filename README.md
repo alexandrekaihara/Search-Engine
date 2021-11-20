@@ -110,7 +110,7 @@ Assim que realizar todas as configurações abra o browser e digite:
 
 Será possível visualizar um campo para digitar a busca e outro para realizar a consulta. Nesse campo realize uma consulta qualquer e automaticamente será encaminhado para uma nova página contendo o resultado da consulta feita.
 
-# Intruções de Uso
+# Instruções de Uso
 Na página inicial será exibido um campo em que será possível inserir a busca. Assim como no Google, é possível adicionar algumas operações dentro da busca para torná-la mais precisa. Tais operações são o AND, OR, busca literal e negação. Nas buscas é possível fazer qualquer composição dessas operações e inclusive adicionar ordem de precedência utilizando-se parênteses.
 
 ## Operação AND
