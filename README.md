@@ -1,5 +1,5 @@
 # Search Engine - Projeto e Análise de Algoritmos
-Este trabalho visa construir um algoritmo busca de páginas eficiente através da indexação de páginas. A solução proposta é realizar a indexação inversa de páginas implementado essencialmente em JavaScript. Devido ao tamanho excessivo dos dados e do código gerado pelo Yarn, todos os arquivos estarão disponíveis em https://github.com/mdewinged/search_engine.git
+Este trabalho visa construir um algoritmo busca de páginas eficiente através da indexação de páginas. A solução proposta é realizar a indexação inversa de páginas implementado essencialmente em JavaScript. 
 
 ## 1. Alunos
 1. Alexandre Mitsuru Kaihara - 18/0029690
