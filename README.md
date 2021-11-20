@@ -116,29 +116,23 @@ Na página inicial será exibido um campo em que será possível inserir a busca
 ## Operação AND
 A operação AND significa a interseção entre o resultado de duas buscas. Por exemplo:
 > unb AND notícias
+
 Retornará todos os resultados que conter a palavra unb e notícias.
 
 ## Operação OR
 A operação OR significa a interseção entre o resultado de duas buscas. Por exemplo:
 > unb OR notícias
+
 Retornará todos os resultados que conter a palavra unb e/ou notícias.
 
 ## Operação Busca Literal
 A busca literal significa será feita a busca por páginas que contenham exatamente um trecho que tenha o mesmo texto contido na busca. Por exemplo:
 > "unb notícias"
+
 Retornará todas as buscas que tiver literalmente "unb notícias".
 
 ## Operação Negação
 A negação é a eliminação das páginas de um conjunto que contenham uma determinada busca ou palavra. Por exemplo:
 > unb -notícias
+
 Retornará todas as páginas que tiverem a palavra unb mas não notícias no mesmo documento.
-
-# Autores
-1. Alexandre Mitsuru Kaihara
-2. Pedro Luis Chaves Rocha 
-3. Gabriel Rodrigues Diogenes Macedo 
-4. Guilherme Chagas Suzuki
-5. Italo FRanklin Cardoso Vaz
-6. Jaqueline Gutierri Coelho 
-7. Felipe Xavier Barbosa da Silva
-
